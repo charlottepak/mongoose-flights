@@ -18,7 +18,6 @@ const ticketSchema = new Schema({
   ref: 'Flight'
 
 }, 
-  // timestamps: true
 });
 
 module.exports = mongoose.model('Ticket', ticketSchema);
