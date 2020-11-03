@@ -7,7 +7,7 @@ module.exports = {
 function create(req, res){
     Flight.findById(req.params.id, function(err, flight){
         console.log(flight, ' this is the flight document')
-        flight.destinations.push(req.body); // add the destination to the destinations array
+        flight.destinations.push(req.body);
         flight.save(function(err){
             res.redirect(`/flights/${flight._id}`)
         })
